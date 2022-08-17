@@ -1,0 +1,53 @@
+@import "../../Layout/mixins.scss";
+
+.selectWrap {
+  display: block;
+  width: 40%;
+  margin-right: 45px;
+}
+
+.SelectLabel {
+  @include inter-600;
+  display: flex;
+  font-size: 21px;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+  padding-right: 12px;
+  color: rgb(20, 30, 55);
+  &FlexStart{
+    @include inter-600;
+    display: flex;
+    font-size: 21px;
+    margin-bottom: 8px;
+    padding-right: 12px;
+    color: rgb(20, 30, 55);
+    padding-left: 12px;
+    justify-content: flex-start;
+  }
+}
+
+
+.select {
+  & [class$="-control"] {
+    min-height: 42px !important;
+    width: 100% !important;
+  }
+
+  & [class$="-indicatorSeparator"] {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  & [class$="-indicatorContainer"] {
+      color: lighten(#212121,20%)!important;
+  }
+  & [class$="-singleValue"] {
+        & > div{
+          display:flex ;
+          align-items: flex-end;
+          & > img{
+            margin-right: 7px;
+          }
+        }
+      }
+
+}

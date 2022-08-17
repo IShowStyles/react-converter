@@ -1,0 +1,105 @@
+@import "../../Layout/mixins.scss";
+
+.ExchangeWrap {
+  display: block;
+  padding-bottom: 35px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  max-width: 100%;
+}
+
+.ExchangeList {
+  display: flex;
+  margin-bottom: 30px;
+  min-height: 52px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom:2px solid black;
+  & li {
+    position: relative;
+    @include inter-500;
+    display: inline-flex;
+    justify-content: center;
+    flex: 1 1 auto;
+    padding: 12px 24px;
+    font-size: 24px;
+    width: 25%;
+    flex-basis: 25%;
+    background: #F0F5FA;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    &:not(:last-child){
+      &:before{
+        top: 0;
+        right: 0;
+        position: absolute;
+        content: "";
+        height: 52px;
+        width: 2px;
+        background:#000;
+      }
+    }
+  }
+}
+
+.ExchangeCon{
+  padding: 0 15px;
+}
+
+.ExchangeParam {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-shrink: 0;
+  width: 100%;
+  margin-bottom: 28px;
+  &Arrows{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 50px;
+    margin-right: 45px;
+    &::before{
+      content: "";
+      position: absolute;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      border: 1px solid #212112;
+    }
+  }
+  &ArrowRight{
+
+    margin-right: 10px;
+    transform: scale(-1,1) translateY(-17%);
+    display: block;
+    width: 25px;
+    height: 25px;
+    & > svg{
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &ArrowLeft{
+
+    margin-left: 10px;
+    transform: translateY(17%);
+    display: block;
+    width: 25px;
+    height: 25px;
+    & > svg{
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.option{
+  display: flex;
+  align-items: center;
+  & > img{
+    margin-right: 10px;
+  }
+}

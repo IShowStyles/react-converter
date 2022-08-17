@@ -1,0 +1,15 @@
+.ButtonSubmit{
+  display: block;
+  width: 100%;
+  text-align: right;
+  & > button{
+    border: 1px solid transparent;
+    padding: 12px 24px;
+    background-color: darken(#0279AC,10%);
+    max-width: 135px;
+    color: #fff;
+    border-radius: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
